@@ -31,18 +31,20 @@ export default function App() {
       {
         _bool ?
           <Button 
-            title='Apresentar Texto'
+            title='Remover Texto'
+            onPress={() => setBool(false)}
           />
           :
           <Button 
-            title='Esconder Texto'
+            title='Apresentar Texto'
+            onPress={() => setBool(true)}
           />
       }
       
 
       {
-        text === 'Ligado' ?
-        <Text>Apresentando Texto</Text>
+        _bool ?
+        <Text>Nome: {name} e idade: {age}</Text>
         :
         <Text></Text>
       }
