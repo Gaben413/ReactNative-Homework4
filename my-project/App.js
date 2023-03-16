@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import React, {useState} from "react"
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function App() {
@@ -34,4 +35,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  input:{
+    minWidth: 200,
+    minHeight: 50,
+    paddingLeft: 10,
+    borderWidth: 2,
+  }
 });
