@@ -4,7 +4,9 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
 
-  const [text, setText] = useState('Empty')
+  const [name, setName] = useState('Empty')
+  const [age, setAge] = useState('24')
+  const [_bool, setBool] = useState(false)
 
   return (
     <View style={styles.container}>
@@ -12,23 +14,31 @@ export default function App() {
       <Text>Digite um nome:</Text>
       <TextInput
         style={styles.input}
-        onChangeText={setText}
+        onChangeText={setName}
         placeholder='Text'
-        value={text}
+        value={name}
       />
 
       <Text>Digite a idade:</Text>
       <TextInput
         keyboardType='numeric'
         style={styles.input}
-        onChangeText={setText}
+        onChangeText={setAge}
         placeholder='Text'
-        value={text}
+        value={age}
       />
 
-      <Button 
-        title='Apresentar Texto'
-      />
+      {
+        _bool ?
+          <Button 
+            title='Apresentar Texto'
+          />
+          :
+          <Button 
+            title='Esconder Texto'
+          />
+      }
+      
 
       {
         text === 'Ligado' ?
@@ -49,4 +59,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  input:{
+    minWidth: 200,
+    minHeight: 50,
+    paddingLeft: 10,
+    borderWidth: 2,
+    margin: 10,
+  }
 });
