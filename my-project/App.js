@@ -27,7 +27,7 @@ export default function App() {
       />
 
       <Button 
-        value='Apresentar Texto'
+        title='Apresentar Texto'
       />
 
       {
